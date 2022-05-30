@@ -1,0 +1,31 @@
+<p class="display-4 text-center">Uploading movie details</p>
+<form #ref="ngForm" (ngSubmit)="onSignup(ref.value)" class="w-75 mx-auto mt-5" style="color:white;">
+    <div class="form-floating mb-3">
+        <input type="Moviename" class="form-control" id="Moviename" placeholder="name@example.com" name="Moviename"
+            ngModel>
+        <label style="color:black;" for="Moviename">MovieName</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="dateOfRelease" placeholder="dateOfRelease" name="dateOfRelease" ngModel>
+        <label style="color:black;" for="dateOfRelease">Date of Release</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input style="color:black;" type="email" class="form-control" id="duration" placeholder="name@example.com" name="duration" ngModel>
+        <label style="color:black;" for="duration">Duration </label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="u/a" placeholder="u/a" name="u/a" ngModel>
+        <label style="color:black;" for="u/a">U/A</label>
+    </div>
+    <div class="form-floating mb-3">
+      <label style="color:black;" for="trailerlink">Trailer Link</label>
+      <input type="file" name="video"  class="form-control mb-3" ngModel  (change)="selectFile1($event)">
+  </div>
+    <input type="file" name="photo"  class="form-control mb-3" ngModel  (change)="selectFile($event)">
+    <label for="" style="color:white;">Summary</label>
+    <textarea name="summary" id="summ" cols="30" rows="10" ngModel></textarea>
+
+    <div class="text-center">
+        <button class="btn btn-dark ps-3 pe-3" type="submit">Submit</button>
+    </div>
+</form>

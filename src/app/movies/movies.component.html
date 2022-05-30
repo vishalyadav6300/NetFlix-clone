@@ -1,0 +1,30 @@
+<div class="container text-center mt-3">
+    <!-- Button trigger modal -->
+    <div class="row">
+        <div class="col-3" *ngFor="let movie of movies;let ind=index">
+            <button type="button" class="border-light" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="clicked(ind)">
+                <img src="{{movie['profileImage']}}" alt="">
+            </button>
+            <!-- Modal -->
+            <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                         <img src="{{movies[indx]['profileImage']}}" alt="">
+                         <h1>{{movies[indx]['Moviename']}}</h1>
+                          <p>{{movies[indx]['dateOfRelease']}} | {{movies[indx]['u/a']}} | {{movies[indx]['duration']}}</p>
+                          <p>{{movies[indx]['summary']}}</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn btn-secondary" ><i class="fa-solid fa-circle-play"></i></button>
+                    <button type="button" class="btn btn-secondary" ><i class="fa-solid fa-plus"></i></button>
+                    <button type="button" class="btn btn-secondary" ><i class="fa-solid fa-download"></i></button>
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

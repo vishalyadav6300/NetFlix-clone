@@ -1,0 +1,15 @@
+.modal{
+    width: 200px;
+    height: 400px;
+}
+.modal-dialog {
+    position:fixed;
+    top:auto;
+    left:30%;
+    bottom:0;
+ }  
+
+ img{
+     width: 200px;
+     height: 150px;
+ }
